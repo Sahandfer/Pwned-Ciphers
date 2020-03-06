@@ -27,8 +27,6 @@ def decrypt_no_key(cipherText):
 if __name__ == '__main__':
     # to get the arguments passed to the program by the command line
     args= sys.argv
-    encrypt("tellhimaboutme", "cafe")
-    decrypt("veqpjiredozxoe", "cafe")
     if (len(args)< 3):
         print("Not enough arguments")
     else:
