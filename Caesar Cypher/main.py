@@ -10,18 +10,18 @@ def encrypt(text, key):
     print (encryptedText)
 
 # Decrypt cipher text with given key
-def decrypt(cipher, key):
+def decrypt(cipherText, key):
     decryptedText = ""
-    for i in range(len(cipher)):
+    for i in range(len(cipherText)):
         # based on values in ASCII 
-        decrement = 65 if cipher[i].isupper() else 97
-        decryptedText += chr((ord(cipher[i])-decrement - key)% 26 + decrement)
+        decrement = 65 if cipherText[i].isupper() else 97
+        decryptedText += chr((ord(cipherText[i])-decrement - key)% 26 + decrement)
     print('Decrypted with key ', key, ' ==> ', decryptedText)
 
 # Decrypt cipher text with brute force
-def decrypt_no_key(cipher):
-    for i in range(0,26):
-        decrypt(cipher, i)
+def decrypt_no_key(cipherText):
+    for key in range(0,26):
+        decrypt(cipherText, key)
 
 if __name__ == '__main__':
     # to get the arguments passed to the program by the command line
