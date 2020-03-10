@@ -8,7 +8,7 @@ def getKey(text):
     return "".join(random.choice(letters) for i in range(len(text)))
 
 
-# Encrypt plain text with given key
+# Encrypt plain text
 def encrypt(text):
     encryptedText = ""
     key = getKey(text)
